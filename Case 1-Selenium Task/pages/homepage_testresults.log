@@ -1,0 +1,603 @@
+[2025-12-12 00:18:39] === CHROME ile test başlatılıyor ===
+[2025-12-12 00:18:52] Home page erişilebilir. Title ve kritik elementler mevcut.
+[2025-12-12 00:18:54] === FIREFOX ile test başlatılıyor ===
+[2025-12-12 00:19:33] Home page erişilebilir. Title ve kritik elementler mevcut.
+[2025-12-12 00:20:59] === CHROME ile test başlatılıyor ===
+[2025-12-12 00:21:14] Home page erişilebilir. Title ve kritik elementler mevcut.
+[2025-12-12 00:21:16] === FIREFOX ile test başlatılıyor ===
+[2025-12-12 00:30:04] === CHROME ile test başlatılıyor ===
+[2025-12-12 00:30:17] Cookie overlay kapatıldı.
+[2025-12-12 00:30:18] Title mevcut: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 00:30:18] Kritik element bulundu: Logo Insider One
+[2025-12-12 00:30:18] Kritik element bulundu: Header Menü Butonu
+[2025-12-12 00:30:18] Kritik element bulundu: Login Button
+[2025-12-12 00:30:18] Kritik element bulundu: Industries Link
+[2025-12-12 00:30:18] Kritik element bulundu: Customers Link
+[2025-12-12 00:30:18] Kritik element bulundu: Resources Button
+[2025-12-12 00:30:18] Home page erişilebilir. Tüm kritik elementler mevcut.
+[2025-12-12 00:30:20] === FIREFOX ile test başlatılıyor ===
+[2025-12-12 00:30:53] firefox testinde hata: NoSuchWindowException: Message: Browsing context has been discarded
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:202:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:782:5
+assert.that/<@chrome://remote/content/shared/webdriver/Assert.sys.mjs:581:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.sys.mjs:169:4
+GeckoDriver.prototype.navigateTo@chrome://remote/content/marionette/driver.sys.mjs:1151:39
+dispatch@chrome://remote/content/marionette/server.sys.mjs:318:40
+execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+onPacket/<@chrome://remote/content/marionette/server.sys.mjs:262:20
+onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+_onJSONObjectReady/<@chrome://remote/content/marionette/transport.sys.mjs:494:20
+
+[2025-12-12 00:31:13] === FIREFOX ile test başlatılıyor ===
+[2025-12-12 00:31:43] Cookie overlay kapatıldı.
+[2025-12-12 00:31:43] Title mevcut: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 00:31:43] Kritik element bulundu: Logo Insider One
+[2025-12-12 00:31:43] Kritik element bulundu: Header Menü Butonu
+[2025-12-12 00:31:43] Kritik element bulundu: Login Button
+[2025-12-12 00:31:43] Kritik element bulundu: Industries Link
+[2025-12-12 00:31:43] Kritik element bulundu: Customers Link
+[2025-12-12 00:31:43] Kritik element bulundu: Resources Button
+[2025-12-12 00:31:43] Home page erişilebilir. Tüm kritik elementler mevcut.
+[2025-12-12 00:31:53] === CHROME ile test başlatılıyor ===
+[2025-12-12 00:32:08] Cookie overlay kapatıldı.
+[2025-12-12 00:32:08] Title mevcut: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 00:32:08] Kritik element bulundu: Logo Insider One
+[2025-12-12 00:32:08] Kritik element bulundu: Header Menü Butonu
+[2025-12-12 00:32:08] Kritik element bulundu: Login Button
+[2025-12-12 00:32:08] Kritik element bulundu: Industries Link
+[2025-12-12 00:32:08] Kritik element bulundu: Customers Link
+[2025-12-12 00:32:08] Kritik element bulundu: Resources Button
+[2025-12-12 00:32:08] Home page erişilebilir. Tüm kritik elementler mevcut.
+[2025-12-12 00:32:10] === FIREFOX ile test başlatılıyor ===
+[2025-12-12 00:32:50] Cookie overlay kapatıldı.
+[2025-12-12 00:32:50] Title mevcut: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 00:32:50] Kritik element bulundu: Logo Insider One
+[2025-12-12 00:32:50] Kritik element bulundu: Header Menü Butonu
+[2025-12-12 00:32:50] Kritik element bulundu: Login Button
+[2025-12-12 00:32:50] Kritik element bulundu: Industries Link
+[2025-12-12 00:32:50] Kritik element bulundu: Customers Link
+[2025-12-12 00:32:50] Kritik element bulundu: Resources Button
+[2025-12-12 00:32:50] Home page erişilebilir. Tüm kritik elementler mevcut.
+[2025-12-12 00:34:50] === CHROME ile test başlatılıyor ===
+[2025-12-12 00:35:04] Cookie overlay kapatıldı.
+[2025-12-12 00:35:04] Title mevcut: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 00:35:04] Kritik element bulundu: Logo Insider One
+[2025-12-12 00:35:04] Kritik element bulundu: Header Menü Butonu
+[2025-12-12 00:35:05] Kritik element bulundu: Login Button
+[2025-12-12 00:35:05] Kritik element bulundu: Industries Link
+[2025-12-12 00:35:05] Kritik element bulundu: Customers Link
+[2025-12-12 00:35:05] Kritik element bulundu: Resources Button
+[2025-12-12 00:35:05] Home page erişilebilir. Tüm kritik elementler mevcut.
+[2025-12-12 00:35:08] === FIREFOX ile test başlatılıyor ===
+[2025-12-12 00:35:48] Cookie overlay kapatıldı.
+[2025-12-12 00:35:48] Title mevcut: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 00:35:48] Kritik element bulundu: Logo Insider One
+[2025-12-12 00:35:48] Kritik element bulundu: Header Menü Butonu
+[2025-12-12 00:35:48] Kritik element bulundu: Login Button
+[2025-12-12 00:35:48] Kritik element bulundu: Industries Link
+[2025-12-12 00:35:48] Kritik element bulundu: Customers Link
+[2025-12-12 00:35:48] Kritik element bulundu: Resources Button
+[2025-12-12 00:35:48] Home page erişilebilir. Tüm kritik elementler mevcut.
+[2025-12-12 00:47:47] === Starting test on CHROME ===
+[2025-12-12 00:48:36] Cookie overlay closed.
+[2025-12-12 00:48:37] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 00:48:37] 4 critical elements found and accessible.
+[2025-12-12 00:48:37] Home page is accessible. All critical elements are present.
+[2025-12-12 00:48:39] === Starting test on FIREFOX ===
+[2025-12-12 00:49:18] Cookie overlay closed.
+[2025-12-12 00:49:18] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 00:49:18] 4 critical elements found and accessible.
+[2025-12-12 00:49:18] Home page is accessible. All critical elements are present.
+[2025-12-12 00:56:04] Cookie overlay closed.
+[2025-12-12 00:56:04] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 00:56:04] Essential element found: Logo Insider One
+[2025-12-12 00:56:04] Essential element found: Header Menu Button
+[2025-12-12 00:56:04] Essential element found: Login Button
+[2025-12-12 00:56:04] Essential element found: Industries Link
+[2025-12-12 00:56:04] Essential element found: Customers Link
+[2025-12-12 00:56:04] Essential element found: Resources Button
+[2025-12-12 00:56:04] Home page is accessible. All critical elements are present.
+[2025-12-12 00:56:54] Cookie overlay closed.
+[2025-12-12 00:56:54] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 00:56:54] Essential element found: Logo Insider One
+[2025-12-12 00:56:54] Essential element found: Header Menu Button
+[2025-12-12 00:56:54] Essential element found: Login Button
+[2025-12-12 00:56:54] Essential element found: Industries Link
+[2025-12-12 00:56:54] Essential element found: Customers Link
+[2025-12-12 00:56:54] Essential element found: Resources Button
+[2025-12-12 00:56:54] Home page is accessible. All critical elements are present.
+[2025-12-12 00:58:30] === Starting test on CHROME ===
+[2025-12-12 00:58:46] Cookie overlay closed.
+[2025-12-12 00:58:46] Home page accessible. Title exists: 'Insider One | #1 Platform for AI-Powered Customer Engagement'. Critical elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 00:58:48] === Starting test on FIREFOX ===
+[2025-12-12 00:59:32] Cookie overlay closed.
+[2025-12-12 00:59:33] Home page accessible. Title exists: 'Insider One | #1 Platform for AI-Powered Customer Engagement'. Critical elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 01:02:40] Cookie overlay closed.
+[2025-12-12 01:02:40] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:02:40] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 01:02:40] Home page is accessible. All critical elements are present.
+[2025-12-12 01:03:17] Cookie overlay closed.
+[2025-12-12 01:03:17] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:03:17] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 01:03:17] Home page is accessible. All critical elements are present.
+[2025-12-12 01:04:09] Cookie overlay closed.
+[2025-12-12 01:04:09] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:04:10] Home page is not accessible! Details: InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=143.0.7499.41); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x510d13
+	0x510d54
+	0x2fe6dd
+	0x305323
+	0x3076c1
+	0x307758
+	0x348bfe
+	0x34977b
+	0x390382
+	0x36b534
+	0x38db13
+	0x36b2e6
+	0x33d321
+	0x33e1d4
+	0x764d54
+	0x76030b
+	0x77cbea
+	0x52ac18
+	0x532c1d
+	0x519018
+	0x5191d9
+	0x503568
+	0x760a5d49
+	0x7705d6db
+	0x7705d661
+. Screenshot: fail_test_scenarios\fail_homepage_1_20251212_010409.png
+[2025-12-12 01:05:00] Cookie overlay closed.
+[2025-12-12 01:05:00] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:05:01] Home page is not accessible! Details: InvalidSelectorException: Message: Given css selector expression "." is invalid: InvalidSelectorError: Document.querySelector: '.' is not a valid selector: "."; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:202:5
+InvalidSelectorError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:455:5
+find_@chrome://remote/content/shared/DOM.sys.mjs:170:11
+. Screenshot: fail_test_scenarios\fail_homepage_2_20251212_010500.png
+[2025-12-12 01:10:39] Cookie overlay closed.
+[2025-12-12 01:10:39] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:10:39] Home page is not accessible! Details: InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=143.0.7499.41); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x510d13
+	0x510d54
+	0x2fe6dd
+	0x305323
+	0x3076c1
+	0x307758
+	0x348bfe
+	0x34977b
+	0x390382
+	0x36b534
+	0x38db13
+	0x36b2e6
+	0x33d321
+	0x33e1d4
+	0x764d54
+	0x76030b
+	0x77cbea
+	0x52ac18
+	0x532c1d
+	0x519018
+	0x5191d9
+	0x503568
+	0x760a5d49
+	0x7705d6db
+	0x7705d661
+. Screenshot: fail_test_scenarios\fail_homepage_1_20251212_011039.png
+[2025-12-12 01:11:24] Cookie overlay closed.
+[2025-12-12 01:11:24] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:11:25] Home page is not accessible! Details: InvalidSelectorException: Message: Given css selector expression "." is invalid: InvalidSelectorError: Document.querySelector: '.' is not a valid selector: "."; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:202:5
+InvalidSelectorError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:455:5
+find_@chrome://remote/content/shared/DOM.sys.mjs:170:11
+. Screenshot: fail_test_scenarios\fail_homepage_2_20251212_011124.png
+[2025-12-12 01:12:29] Cookie overlay closed.
+[2025-12-12 01:12:29] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:12:30] Home page is not accessible! Details: InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=143.0.7499.41); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x510d13
+	0x510d54
+	0x2fe6dd
+	0x305323
+	0x3076c1
+	0x307758
+	0x348bfe
+	0x34977b
+	0x390382
+	0x36b534
+	0x38db13
+	0x36b2e6
+	0x33d321
+	0x33e1d4
+	0x764d54
+	0x76030b
+	0x77cbea
+	0x52ac18
+	0x532c1d
+	0x519018
+	0x5191d9
+	0x503568
+	0x760a5d49
+	0x7705d6db
+	0x7705d661
+. Screenshot: fail_test_scenarios\fail_homepage_1.png
+[2025-12-12 01:13:09] Cookie overlay closed.
+[2025-12-12 01:13:09] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:13:10] Home page is not accessible! Details: InvalidSelectorException: Message: Given css selector expression "." is invalid: InvalidSelectorError: Document.querySelector: '.' is not a valid selector: "."; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:202:5
+InvalidSelectorError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:455:5
+find_@chrome://remote/content/shared/DOM.sys.mjs:170:11
+. Screenshot: fail_test_scenarios\fail_homepage_2.png
+[2025-12-12 01:17:13] Cookie overlay closed.
+[2025-12-12 01:17:13] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:17:13] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 01:17:13] Home page is accessible. All critical elements are present.
+[2025-12-12 01:17:45] Cookie overlay closed.
+[2025-12-12 01:17:45] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:17:45] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 01:17:45] Home page is accessible. All critical elements are present.
+[2025-12-12 01:21:10] === STARTING TEST ON chrome ===
+[2025-12-12 01:21:24] chrome test encountered an error: WebDriverException: Message: unknown error: failed to change window state to 'normal', current state is 'maximized'
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x510d13
+	0x510d54
+	0x2fe6dd
+	0x2e0eaa
+	0x2de8fb
+	0x2de0aa
+	0x3a1a5f
+	0x36b4ec
+	0x38db13
+	0x36b2e6
+	0x33d321
+	0x33e1d4
+	0x764d54
+	0x76030b
+	0x77cbea
+	0x52ac18
+	0x532c1d
+	0x519018
+	0x5191d9
+	0x503568
+	0x760a5d49
+	0x7705d6db
+	0x7705d661
+
+[2025-12-12 01:21:26] === STARTING TEST ON firefox ===
+[2025-12-12 01:21:46] === STARTING TEST ON Chrome ===
+[2025-12-12 01:22:00] Cookie overlay closed.
+[2025-12-12 01:22:00] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:22:00] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 01:22:00] Home page is accessible. All critical elements are present.
+[2025-12-12 01:22:03] === STARTING TEST ON Firefox ===
+[2025-12-12 01:22:46] === STARTING TEST ON CHROME ===
+[2025-12-12 01:22:59] Cookie overlay closed.
+[2025-12-12 01:22:59] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:23:00] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 01:23:00] Home page is accessible. All critical elements are present.
+[2025-12-12 01:23:02] === STARTING TEST ON FIREFOX ===
+[2025-12-12 01:23:55] Cookie overlay closed.
+[2025-12-12 01:23:55] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:23:55] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 01:23:55] Home page is accessible. All critical elements are present.
+[2025-12-12 01:27:46] === STARTING TEST ON CHROME ===
+[2025-12-12 01:27:58] Cookie overlay closed.
+[2025-12-12 01:27:58] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:27:58] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 01:27:58] Home page is accessible. All critical elements are present.
+[2025-12-12 01:28:00] === STARTING TEST ON FIREFOX ===
+[2025-12-12 01:28:50] Cookie overlay closed.
+[2025-12-12 01:28:50] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:28:50] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 01:28:50] Home page is accessible. All critical elements are present.
+[2025-12-12 01:30:46] === STARTING TEST ON CHROME ===
+[2025-12-12 01:30:59] Cookie overlay closed.
+[2025-12-12 01:30:59] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:31:00] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 01:31:00] Home page is accessible. All critical elements are present.
+[2025-12-12 01:31:02] === STARTING TEST ON FIREFOX ===
+[2025-12-12 01:31:35] === STARTING TEST ON CHROME ===
+[2025-12-12 01:31:47] Cookie overlay closed.
+[2025-12-12 01:31:47] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:31:48] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 01:31:48] Home page is accessible. All critical elements are present.
+[2025-12-12 01:31:50] === STARTING TEST ON FIREFOX ===
+[2025-12-12 01:32:33] Cookie overlay closed.
+[2025-12-12 01:32:33] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:32:33] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 01:32:33] Home page is accessible. All critical elements are present.
+[2025-12-12 01:32:48] === STARTING TEST ON CHROME ===
+[2025-12-12 01:33:02] Cookie overlay closed.
+[2025-12-12 01:33:02] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:33:03] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 01:33:03] Home page is accessible. All critical elements are present.
+[2025-12-12 01:33:05] === STARTING TEST ON FIREFOX ===
+[2025-12-12 01:33:32] FIREFOX test encountered an error: InvalidSessionIdException: Message: WebDriver session does not exist, or is not active; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:202:5
+InvalidSessionIDError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:472:5
+assert.that/<@chrome://remote/content/shared/webdriver/Assert.sys.mjs:581:13
+assert.session@chrome://remote/content/shared/webdriver/Assert.sys.mjs:38:4
+dispatch@chrome://remote/content/marionette/server.sys.mjs:315:19
+execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+onPacket/<@chrome://remote/content/marionette/server.sys.mjs:262:20
+onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+_onJSONObjectReady/<@chrome://remote/content/marionette/transport.sys.mjs:494:20
+
+[2025-12-12 01:33:36] === STARTING TEST ON CHROME ===
+[2025-12-12 01:33:49] Cookie overlay closed.
+[2025-12-12 01:33:49] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:33:50] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 01:33:50] Home page is accessible. All critical elements are present.
+[2025-12-12 01:33:52] === STARTING TEST ON FIREFOX ===
+[2025-12-12 01:34:18] FIREFOX test encountered an error: InvalidSessionIdException: Message: WebDriver session does not exist, or is not active; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:202:5
+InvalidSessionIDError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:472:5
+assert.that/<@chrome://remote/content/shared/webdriver/Assert.sys.mjs:581:13
+assert.session@chrome://remote/content/shared/webdriver/Assert.sys.mjs:38:4
+dispatch@chrome://remote/content/marionette/server.sys.mjs:315:19
+execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+onPacket/<@chrome://remote/content/marionette/server.sys.mjs:262:20
+onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+_onJSONObjectReady/<@chrome://remote/content/marionette/transport.sys.mjs:494:20
+
+[2025-12-12 01:34:27] === STARTING TEST ON CHROME ===
+[2025-12-12 01:34:40] Cookie overlay closed.
+[2025-12-12 01:34:40] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:34:41] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 01:34:41] Home page is accessible. All critical elements are present.
+[2025-12-12 01:34:43] === STARTING TEST ON FIREFOX ===
+[2025-12-12 01:35:06] FIREFOX test encountered an error: ValueError: response body:
+{"message":"API rate limit exceeded for 176.234.223.254. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/latest
+response headers:
+{'Date': 'Thu, 11 Dec 2025 22:35:06 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1765493329', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '281', 'X-GitHub-Request-Id': '41BA:299698:C6AF94:B326F4:693B471A'}
+
+[2025-12-12 01:35:44] === STARTING TEST ON CHROME ===
+[2025-12-12 01:35:58] Cookie overlay closed.
+[2025-12-12 01:35:58] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:35:59] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 01:35:59] Home page is accessible. All critical elements are present.
+[2025-12-12 01:36:01] === STARTING TEST ON FIREFOX ===
+[2025-12-12 01:36:06] FIREFOX test encountered an error: ValueError: response body:
+{"message":"API rate limit exceeded for 176.234.223.254. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/latest
+response headers:
+{'Date': 'Thu, 11 Dec 2025 22:36:06 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1765493329', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '281', 'X-GitHub-Request-Id': '4124:292701:C0FC05:AD7745:693B4756'}
+
+[2025-12-12 01:38:20] === STARTING TEST ON CHROME ===
+[2025-12-12 01:38:34] Cookie overlay closed.
+[2025-12-12 01:38:34] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:38:34] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 01:38:34] Home page is accessible. All critical elements are present.
+[2025-12-12 01:38:36] === STARTING TEST ON FIREFOX ===
+[2025-12-12 01:38:43] FIREFOX test encountered an error: ValueError: response body:
+{"message":"API rate limit exceeded for 176.234.223.254. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/latest
+response headers:
+{'Date': 'Thu, 11 Dec 2025 22:38:43 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1765493329', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '281', 'X-GitHub-Request-Id': '3EE2:14B118:CB35D1:B79904:693B47F3'}
+
+[2025-12-12 01:57:33] === STARTING TEST ON CHROME ===
+[2025-12-12 01:57:47] Cookie overlay closed.
+[2025-12-12 01:57:47] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:57:47] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 01:57:47] Home page is accessible. All critical elements are present.
+[2025-12-12 01:57:50] === STARTING TEST ON FIREFOX ===
+[2025-12-12 01:58:26] Cookie overlay closed.
+[2025-12-12 01:58:26] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 01:58:26] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 01:58:26] Home page is accessible. All critical elements are present.
+[2025-12-12 02:00:53] === STARTING TEST ON CHROME ===
+[2025-12-12 02:01:06] Cookie overlay closed.
+[2025-12-12 02:01:06] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 02:01:22] Home page is not accessible! Details: TimeoutException: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x510d13
+	0x510d54
+	0x2fe6dd
+	0x3493a5
+	0x34977b
+	0x390382
+	0x36b534
+	0x38db13
+	0x36b2e6
+	0x33d321
+	0x33e1d4
+	0x764d54
+	0x76030b
+	0x77cbea
+	0x52ac18
+	0x532c1d
+	0x519018
+	0x5191d9
+	0x503568
+	0x760a5d49
+	0x7705d6db
+	0x7705d661
+. Screenshot: fail_test_scenarios\fail_homepage_1_20251212_020122.png
+[2025-12-12 02:01:25] === STARTING TEST ON FIREFOX ===
+[2025-12-12 02:02:13] Cookie overlay closed.
+[2025-12-12 02:02:13] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 02:02:31] Home page is not accessible! Details: TimeoutException: Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:202:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:555:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+. Screenshot: fail_test_scenarios\fail_homepage_2_20251212_020230.png
+[2025-12-12 02:02:38] === STARTING TEST ON CHROME ===
+[2025-12-12 02:02:53] Cookie overlay closed.
+[2025-12-12 02:02:53] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 02:03:08] Home page is not accessible! Details: TimeoutException: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x510d13
+	0x510d54
+	0x2fe6dd
+	0x3493a5
+	0x34977b
+	0x390382
+	0x36b534
+	0x38db13
+	0x36b2e6
+	0x33d321
+	0x33e1d4
+	0x764d54
+	0x76030b
+	0x77cbea
+	0x52ac18
+	0x532c1d
+	0x519018
+	0x5191d9
+	0x503568
+	0x760a5d49
+	0x7705d6db
+	0x7705d661
+. Screenshot: fail_test_scenarios\fail_homepage_1.png
+[2025-12-12 02:03:11] === STARTING TEST ON FIREFOX ===
+[2025-12-12 02:03:42] Cookie overlay closed.
+[2025-12-12 02:03:42] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 02:04:00] Home page is not accessible! Details: TimeoutException: Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:202:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:555:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+. Screenshot: fail_test_scenarios\fail_homepage_2.png
+[2025-12-12 02:05:28] === STARTING TEST ON CHROME ===
+[2025-12-12 02:06:30] Cookie overlay closed.
+[2025-12-12 02:06:30] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 02:06:46] Home page is not accessible! Details: TimeoutException: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x510d13
+	0x510d54
+	0x2fe6dd
+	0x3493a5
+	0x34977b
+	0x390382
+	0x36b534
+	0x38db13
+	0x36b2e6
+	0x33d321
+	0x33e1d4
+	0x764d54
+	0x76030b
+	0x77cbea
+	0x52ac18
+	0x532c1d
+	0x519018
+	0x5191d9
+	0x503568
+	0x760a5d49
+	0x7705d6db
+	0x7705d661
+. Screenshot: homepage_fail_testscreenshots\fail_homepage_1.png
+[2025-12-12 02:06:48] === STARTING TEST ON FIREFOX ===
+[2025-12-12 02:07:25] Cookie overlay closed.
+[2025-12-12 02:07:25] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 02:07:41] Home page is not accessible! Details: TimeoutException: Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:202:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:555:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+. Screenshot: homepage_fail_testscreenshots\fail_homepage_2.png
+[2025-12-12 02:08:17] === STARTING TEST ON CHROME ===
+[2025-12-12 02:08:31] Cookie overlay closed.
+[2025-12-12 02:08:31] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 02:08:31] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 02:08:31] Home page is accessible. All critical elements are present.
+[2025-12-12 02:08:33] === STARTING TEST ON FIREFOX ===
+[2025-12-12 02:09:14] Cookie overlay closed.
+[2025-12-12 02:09:14] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 02:09:14] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 02:09:14] Home page is accessible. All critical elements are present.
+[2025-12-12 14:23:30] === STARTING TEST ON CHROME ===
+[2025-12-12 14:23:48] Cookie overlay closed.
+[2025-12-12 14:23:48] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 14:23:48] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 14:23:48] Home page is accessible. All essential elements are present.
+[2025-12-12 14:23:52] === STARTING TEST ON FIREFOX ===
+[2025-12-12 14:24:35] Cookie overlay closed.
+[2025-12-12 14:24:35] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 14:24:35] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 14:24:35] Home page is accessible. All essential elements are present.
+[2025-12-12 14:25:15] === STARTING TEST ON CHROME ===
+[2025-12-12 14:25:29] Cookie overlay closed.
+[2025-12-12 14:25:29] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 14:25:29] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 14:25:29] Home page is accessible. All essential elements are present.
+[2025-12-12 14:25:32] === STARTING TEST ON FIREFOX ===
+[2025-12-12 14:26:12] Cookie overlay closed.
+[2025-12-12 14:26:12] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-12 14:26:12] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-12 14:26:12] Home page is accessible. All essential elements are present.
+[2025-12-13 05:28:40] === STARTING TEST ON CHROME ===
+[2025-12-13 05:28:47] CHROME test encountered an error: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.110)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x380d13
+	0x380d54
+	0x16e6dd
+	0x14ca8d
+	0x1e1ffb
+	0x1fd44c
+	0x1db2e6
+	0x1ad321
+	0x1ae1d4
+	0x5d4d54
+	0x5d030b
+	0x5ecbea
+	0x39ac18
+	0x3a2c1d
+	0x389018
+	0x3891d9
+	0x373568
+	0x760a5d49
+	0x7705d6db
+	0x7705d661
+	0
+
+[2025-12-13 05:28:49] === STARTING TEST ON FIREFOX ===
+[2025-12-13 05:28:54] === STARTING TEST ON CHROME ===
+[2025-12-13 05:29:02] Cookie overlay closed.
+[2025-12-13 05:29:02] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-13 05:29:02] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-13 05:29:02] Home page is accessible. All essential elements are present.
+[2025-12-13 05:29:04] === STARTING TEST ON FIREFOX ===
+[2025-12-13 05:29:22] Cookie overlay closed.
+[2025-12-13 05:29:22] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-13 05:29:23] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-13 05:29:23] Home page is accessible. All essential elements are present.

@@ -1,0 +1,184 @@
+2025-12-12 01:39:55,376 - INFO - ====== WebDriver manager ======
+2025-12-12 01:39:56,704 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 01:39:57,479 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 01:39:58,819 - INFO - Driver [C:\Users\G?lsev\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-12 01:40:36,828 - ERROR - Failed to select Istanbul,Turkey.
+2025-12-12 01:40:37,212 - INFO - Screenshot saved: qa_jobs_page.fail.screenshots\fail_1.png
+2025-12-12 01:40:41,373 - INFO - Browser closed.
+2025-12-12 01:41:15,925 - INFO - ====== WebDriver manager ======
+2025-12-12 01:41:20,596 - INFO - Get LATEST geckodriver version for None firefox
+2025-12-12 01:43:45,002 - INFO - ====== WebDriver manager ======
+2025-12-12 01:43:46,093 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 01:43:46,765 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 01:43:47,449 - INFO - Driver [C:\Users\G?lsev\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-12 01:43:53,034 - INFO - Cookie popup accepted.
+2025-12-12 01:44:07,249 - INFO - Location: Istanbul, Turkey selected.
+2025-12-12 01:44:08,541 - INFO - Department: Quality Assurance selected.
+2025-12-12 01:44:10,408 - INFO - Clicked 'View Role' button.
+2025-12-12 01:44:16,307 - INFO - 'Apply for this job' button clicked successfully!
+2025-12-12 01:44:20,528 - INFO - Browser closed.
+2025-12-12 01:46:15,294 - INFO - ====== WebDriver manager ======
+2025-12-12 01:46:16,761 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 01:46:17,543 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 01:46:18,574 - INFO - Driver [C:\Users\G?lsev\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-12 01:46:23,387 - INFO - Cookie popup accepted.
+2025-12-12 01:46:34,954 - INFO - Location: Istanbul, Turkey selected.
+2025-12-12 01:46:36,316 - INFO - Department: Quality Assurance selected.
+2025-12-12 01:47:02,180 - ERROR - Failed to click 'View Role' button.
+2025-12-12 01:47:02,579 - INFO - Screenshot saved: qa_jobs_page.fail.screenshots\fail_2.png
+2025-12-12 01:47:06,782 - INFO - Browser closed.
+2025-12-12 01:49:29,137 - INFO - ====== WebDriver manager ======
+2025-12-12 01:49:30,289 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 01:49:30,987 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 01:49:31,673 - INFO - Driver [C:\Users\G?lsev\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-12 01:49:35,561 - INFO - Cookie popup accepted.
+2025-12-12 01:49:45,026 - INFO - Location: Istanbul, Turkey selected.
+2025-12-12 01:49:46,381 - INFO - Department: Quality Assurance selected.
+2025-12-12 01:50:12,473 - ERROR - Failed to click 'View Role' button.
+2025-12-12 01:50:12,797 - INFO - Screenshot saved: qa_jobs_page.fail.screenshots\fail_3.png
+2025-12-12 01:50:17,029 - INFO - Browser closed.
+2025-12-12 01:51:56,764 - INFO - ====== WebDriver manager ======
+2025-12-12 01:51:57,894 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 01:51:58,560 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 01:51:59,237 - INFO - Driver [C:\Users\G?lsev\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-12 01:52:03,391 - INFO - Cookie popup accepted.
+2025-12-12 01:52:15,944 - INFO - Location: Istanbul, Turkey selected.
+2025-12-12 01:52:17,153 - INFO - Department: Quality Assurance selected.
+2025-12-12 01:52:21,193 - INFO - Clicked 'View Role' button.
+2025-12-12 01:52:27,260 - INFO - 'Apply for this job' button clicked successfully!
+2025-12-12 01:52:31,499 - INFO - Browser closed.
+2025-12-12 01:53:03,961 - INFO - ====== WebDriver manager ======
+2025-12-12 01:53:09,305 - INFO - Get LATEST geckodriver version for None firefox
+2025-12-12 01:53:10,223 - INFO - Getting latest mozilla release info for v0.36.0
+2025-12-12 01:53:10,996 - INFO - About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-win64.zip
+2025-12-12 01:53:12,538 - INFO - Driver downloading response is 200
+2025-12-12 01:53:16,515 - INFO - Get LATEST geckodriver version for None firefox
+2025-12-12 01:53:19,391 - INFO - Get LATEST geckodriver version for None firefox
+2025-12-12 01:53:23,036 - INFO - Driver has been saved in cache [C:\Users\G?lsev\.wdm\drivers\geckodriver\win64\v0.36.0]
+2025-12-12 01:53:35,107 - INFO - Cookie popup accepted.
+2025-12-12 01:53:44,496 - ERROR - Failed to select location Istanbul, Turkey.
+2025-12-12 01:54:00,563 - INFO - ====== WebDriver manager ======
+2025-12-12 01:54:05,331 - INFO - Get LATEST geckodriver version for None firefox
+2025-12-12 01:54:06,256 - INFO - Getting latest mozilla release info for v0.36.0
+2025-12-12 01:54:07,147 - INFO - About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-win64.zip
+2025-12-12 01:54:08,511 - INFO - Driver downloading response is 200
+2025-12-12 01:54:14,024 - INFO - Get LATEST geckodriver version for None firefox
+2025-12-12 01:54:16,801 - INFO - Get LATEST geckodriver version for None firefox
+2025-12-12 01:54:19,667 - INFO - Driver has been saved in cache [C:\Users\G?lsev\.wdm\drivers\geckodriver\win64\v0.36.0]
+2025-12-12 01:54:30,340 - INFO - Cookie popup accepted.
+2025-12-12 01:54:41,236 - INFO - Location: Istanbul, Turkey selected.
+2025-12-12 01:54:42,467 - INFO - Department: Quality Assurance selected.
+2025-12-12 01:54:45,861 - INFO - Clicked 'View Role' button.
+2025-12-12 01:54:49,840 - INFO - 'Apply for this job' button clicked successfully!
+2025-12-12 01:54:55,471 - INFO - Browser closed.
+2025-12-12 02:10:33,630 - INFO - ====== WebDriver manager ======
+2025-12-12 02:10:38,502 - INFO - Get LATEST geckodriver version for None firefox
+2025-12-12 02:10:39,630 - INFO - Getting latest mozilla release info for v0.36.0
+2025-12-12 02:10:40,563 - INFO - About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-win64.zip
+2025-12-12 02:10:42,601 - INFO - Driver downloading response is 200
+2025-12-12 02:11:01,349 - INFO - Get LATEST geckodriver version for None firefox
+2025-12-12 02:11:04,549 - INFO - Get LATEST geckodriver version for None firefox
+2025-12-12 02:11:07,852 - INFO - Driver has been saved in cache [C:\Users\G?lsev\.wdm\drivers\geckodriver\win64\v0.36.0]
+2025-12-12 02:11:18,540 - INFO - Cookie popup accepted.
+2025-12-12 02:11:30,528 - INFO - Location: Istanbul, Turkey selected.
+2025-12-12 02:11:31,770 - INFO - Department: Quality Assurance selected.
+2025-12-12 02:11:35,568 - INFO - Clicked 'View Role' button.
+2025-12-12 02:12:03,269 - INFO - 'Apply for this job' button clicked successfully!
+2025-12-12 02:12:08,906 - INFO - Browser closed.
+2025-12-12 02:12:33,162 - INFO - ====== WebDriver manager ======
+2025-12-12 02:12:34,287 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 02:12:35,115 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 02:12:36,238 - INFO - Driver [C:\Users\G?lsev\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-12 02:12:45,309 - INFO - Cookie popup accepted.
+2025-12-12 02:12:58,839 - INFO - Location: Istanbul, Turkey selected.
+2025-12-12 02:13:00,044 - INFO - Department: Quality Assurance selected.
+2025-12-12 02:13:25,685 - ERROR - Failed to click 'View Role' button.
+2025-12-12 02:13:25,899 - INFO - Screenshot saved: qa_jobs_page.fail.screenshots\fail_4.png
+2025-12-12 02:13:30,070 - INFO - Browser closed.
+2025-12-12 02:13:53,041 - INFO - ====== WebDriver manager ======
+2025-12-12 02:13:54,077 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 02:13:55,014 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 02:13:56,849 - INFO - Driver [C:\Users\G?lsev\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-12 02:14:01,472 - INFO - Cookie popup accepted.
+2025-12-12 02:14:30,051 - ERROR - Failed to select location Istanbul, Turkey.
+2025-12-12 02:14:30,310 - INFO - Screenshot saved: qa_jobs_page.fail.screenshots\fail_5.png
+2025-12-12 02:14:34,484 - INFO - Browser closed.
+2025-12-12 02:14:59,310 - INFO - ====== WebDriver manager ======
+2025-12-12 02:15:00,290 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 02:15:02,008 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 02:15:02,693 - INFO - Driver [C:\Users\G?lsev\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-12 02:15:09,372 - INFO - Cookie popup accepted.
+2025-12-12 02:15:28,172 - INFO - Location: Istanbul, Turkey selected.
+2025-12-12 02:15:29,482 - INFO - Department: Quality Assurance selected.
+2025-12-12 02:15:35,251 - INFO - Clicked 'View Role' button.
+2025-12-12 02:15:51,768 - INFO - 'Apply for this job' button clicked successfully!
+2025-12-12 02:15:55,981 - INFO - Browser closed.
+2025-12-12 02:16:34,077 - INFO - ====== WebDriver manager ======
+2025-12-12 02:16:35,065 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 02:16:35,904 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 02:16:36,746 - INFO - Driver [C:\Users\G?lsev\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-12 02:16:42,096 - INFO - Cookie popup accepted.
+2025-12-12 02:16:57,708 - INFO - Location: Istanbul, Turkey selected.
+2025-12-12 02:16:58,907 - INFO - Department: Quality Assurance selected.
+2025-12-12 02:17:04,659 - INFO - Clicked 'View Role' button.
+2025-12-12 02:17:23,238 - INFO - 'Apply for this job' button clicked successfully!
+2025-12-12 02:17:27,421 - INFO - Browser closed.
+2025-12-12 14:26:41,108 - INFO - ====== WebDriver manager ======
+2025-12-12 14:26:42,715 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 14:26:43,480 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 14:26:44,226 - INFO - Driver [C:\Users\G?lsev\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-12 14:26:48,662 - INFO - Cookie popup accepted.
+2025-12-12 14:26:56,089 - INFO - Location: Istanbul, Turkey selected.
+2025-12-12 14:26:57,287 - INFO - Department: Quality Assurance selected.
+2025-12-12 14:27:00,187 - ERROR - Failed to click 'View Role' button.
+2025-12-12 14:27:00,761 - INFO - Screenshot saved: qa_jobs_page.fail.screenshots\fail_6.png
+2025-12-12 14:27:04,995 - INFO - Browser closed.
+2025-12-12 14:27:36,372 - INFO - ====== WebDriver manager ======
+2025-12-12 14:27:37,705 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 14:27:38,589 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-12 14:27:39,505 - INFO - Driver [C:\Users\G?lsev\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-12 14:27:43,605 - INFO - Cookie popup accepted.
+2025-12-12 14:27:52,195 - INFO - Location: Istanbul, Turkey selected.
+2025-12-12 14:27:53,383 - INFO - Department: Quality Assurance selected.
+2025-12-12 14:27:55,315 - INFO - Clicked 'View Role' button.
+2025-12-12 14:28:00,016 - INFO - 'Apply for this job' button clicked successfully!
+2025-12-12 14:28:04,349 - INFO - Browser closed.
+2025-12-13 04:13:10,774 - INFO - ====== WebDriver manager ======
+2025-12-13 04:13:12,269 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-13 04:13:12,479 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-13 04:13:12,637 - INFO - Driver [C:\Users\Gülsev\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-13 04:13:17,694 - INFO - Cookie popup accepted.
+2025-12-13 04:13:24,677 - INFO - Location: Istanbul, Turkey selected.
+2025-12-13 04:13:25,997 - INFO - Department: Quality Assurance selected.
+2025-12-13 04:13:28,751 - ERROR - Failed to click 'View Role' button.
+2025-12-13 04:13:29,141 - INFO - Screenshot saved: qa_jobs_page.fail.screenshots\fail_6.png
+2025-12-13 04:13:33,443 - INFO - Browser closed.
+2025-12-13 04:13:37,799 - INFO - ====== WebDriver manager ======
+2025-12-13 04:13:38,903 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-13 04:13:39,095 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-13 04:13:39,263 - INFO - Driver [C:\Users\Gülsev\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-13 04:13:42,285 - INFO - Cookie popup accepted.
+2025-12-13 04:13:49,679 - INFO - Location: Istanbul, Turkey selected.
+2025-12-13 04:13:50,891 - INFO - Department: Quality Assurance selected.
+2025-12-13 04:13:52,763 - INFO - Clicked 'View Role' button.
+2025-12-13 04:13:58,032 - INFO - 'Apply for this job' button clicked successfully!
+2025-12-13 04:14:02,294 - INFO - Browser closed.
+2025-12-13 05:00:35,359 - INFO - ====== WebDriver manager ======
+2025-12-13 05:00:36,488 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-13 05:00:37,959 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-13 05:00:38,120 - INFO - Driver [C:\Users\Gülsev\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-13 05:00:42,099 - INFO - Cookie popup accepted.
+2025-12-13 05:00:49,494 - INFO - Location: Istanbul, Turkey selected.
+2025-12-13 05:00:50,743 - INFO - Department: Quality Assurance selected.
+2025-12-13 05:00:55,071 - INFO - Clicked 'View Role' button.
+2025-12-13 05:00:59,881 - INFO - 'Apply for this job' button clicked successfully!
+2025-12-13 05:01:04,100 - INFO - Browser closed.
+2025-12-13 05:29:29,789 - INFO - ====== WebDriver manager ======
+2025-12-13 05:29:30,836 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-13 05:29:31,019 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-13 05:29:31,208 - INFO - Driver [C:\Users\Gülsev\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-13 05:29:34,660 - INFO - Cookie popup accepted.
+2025-12-13 05:29:41,465 - INFO - Location: Istanbul, Turkey selected.
+2025-12-13 05:29:42,688 - INFO - Department: Quality Assurance selected.
+2025-12-13 05:29:44,519 - INFO - Clicked 'View Role' button.
+2025-12-13 05:29:50,581 - INFO - 'Apply for this job' button clicked successfully!
