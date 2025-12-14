@@ -1,0 +1,1963 @@
+{
+  "info": {
+    "_postman_id": "60ab9fd2-8aea-412b-9659-61be136ba119",
+    "name": "Petstore API Test Scenarios",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "PetStore-User Model Test Scenarios",
+      "item": [
+        {
+          "name": "TC-01-GET User Login (Positive)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status Code is 200 OK\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\nconst responseJson = pm.response.json();\r\npm.test(\"Login successful, response type is 'unknown'\", function () {\r\n    pm.expect(responseJson.type).to.eql('unknown');\r\n});"
+                ],
+                "type": "text/javascript",
+                "id": "f572f533-0e17-4f0e-8411-af2eeb89b410"
+              }
+            }
+          ],
+          "id": "98a00eff-1837-4155-81f8-7e6adbf2c1fb",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/user/login?username={{username}}&password={{password}}",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "user",
+                "login"
+              ],
+              "query": [
+                {
+                  "key": "username",
+                  "value": "{{username}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{password}}"
+                }
+              ]
+            },
+            "description": "Attempts to log in with the dynamically created user credentials."
+          },
+          "response": []
+        },
+        {
+          "name": "TC-02-GET User Login (Negative - Invalid Credentials)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status Code is 400 or 404\", function () {\r\n    // Petstore API usually returns 400 Bad Request or 404 Not Found for failed login\r\n    pm.expect(pm.response.code).to.be.oneOf([400, 404]);\r\n});\r\n\r\ntry {\r\n    const responseJson = pm.response.json();\r\n    pm.test(\"Error message indicates Invalid credentials\", function () {\r\n        pm.expect(responseJson.message).to.be.a('string').and.include('Invalid username/password');\r\n    });\r\n} catch (e) {}"
+                ],
+                "type": "text/javascript",
+                "id": "7eb138f1-84da-42b2-a460-d1c30a46f882"
+              }
+            }
+          ],
+          "id": "9578f7ba-e573-4a4f-815d-bafc5405c49b",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/user/login?username=wrong_user&password=wrong_password",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "user",
+                "login"
+              ],
+              "query": [
+                {
+                  "key": "username",
+                  "value": "wrong_user"
+                },
+                {
+                  "key": "password",
+                  "value": "wrong_password"
+                }
+              ]
+            },
+            "description": "Attempts to log in with incorrect username/password. Expect: 400 or 404."
+          },
+          "response": []
+        },
+        {
+          "name": "TC-03-Post Create User(Positive)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "6d1f6523-3180-400b-8f63-53fafd106254",
+                "exec": [
+                  "const generate_num= Math.floor((Math.random()*100+1));\r",
+                  "var generate_str = \"smarta\" + Math.random().toString(36).substring(2);\r",
+                  "\r",
+                  "pm.environment.set(\"id\",generate_num);\r",
+                  "pm.collectionVariables.set(\"username\", generate_str);\r",
+                  "pm.collectionVariables.set(\"firstName\", generate_str);\r",
+                  "pm.collectionVariables.set(\"lastName\", generate_str);\r",
+                  "pm.variables.set(\"email\",generate_str +\"@hotmail.com\");\r",
+                  "pm.variables.set(\"password\", generate_str);\r",
+                  "pm.variables.set(\"phone\", \"312345679\");\r",
+                  "pm.variables.set(\"userStatus\", 0);\r",
+                  "//console.log(\"ID:\", generate_num, \"Username:\", generate_str);\r",
+                  "\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "cce3b8ad-c103-435f-b075-ab8966045af6",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": {{id}},\r\n  \"username\": \"{{username}}\",\r\n  \"firstName\": \"{{firstName}}\",\r\n  \"lastName\": \"{{lastName}}\",\r\n  \"email\": \"{{email}}\",\r\n  \"password\": \"{{password}}\",\r\n  \"phone\": \"{{phone}}\",\r\n  \"userStatus\": {{userStatus}}\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/user",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "user"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST'  \n'[https://petstore.swagger.io/v2/user'](https://petstore.swagger.io/v2/user')  \n\\-H 'accept: application/json'  \n\\-H 'Content-Type: application/json'  \n\\-d '{  \n\"id\": 0,  \n\"username\": \"string\",  \n\"firstName\": \"string\",  \n\"lastName\": \"string\",  \n\"email\": \"string\",  \n\"password\": \"string\",  \n\"phone\": \"string\",  \n\"userStatus\": 0  \n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-04-POST Create User (Negative - Bad Input )",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "6ffbc07a-767c-4cde-bace-7ea507b006a1",
+                "exec": [
+                  "pm.test(\"Status Code is 400 Bad Request\", function () {\r",
+                  "    pm.response.to.have.status(400);\r",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "82bcd03a-148d-47e1-b4a9-970cf20f192c",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 0,\r\n  \"firstName\": \"string\",\r\n  \"lastName\": \"string\",\r\n  \"email\": \"string\",\r\n  \"password\": \"string\",\r\n  \"phone\": \"string\",\r\n  \"userStatus\": 0\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/user",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "user"
+              ]
+            },
+            "description": "Sends a request missing a required field (e.g., 'username'). Expect: 400 Bad Request."
+          },
+          "response": []
+        },
+        {
+          "name": "TC-05-POST Create User (Negative - Invalid Data Type)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status Code is 400 Bad Request\", function () {\r\n    pm.response.to.have.status(400);\r\n});"
+                ],
+                "type": "text/javascript",
+                "id": "838361d9-a00b-499d-9fef-4a39019f7fd6"
+              }
+            }
+          ],
+          "id": "518fad49-2d47-4d6b-98f0-358bfa81d173",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": \"not_a_number\", \r\n  \"username\": \"data_type_test\",\r\n  \"firstName\": \"string\",\r\n  \"lastName\": \"string\",\r\n  \"email\": \"string\",\r\n  \"password\": \"string\",\r\n  \"phone\": \"string\",\r\n  \"userStatus\": \"not_a_number\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/user",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "user"
+              ]
+            },
+            "description": "Sends invalid data types for numeric fields like 'id' and 'userStatus'. Expect: 400 Bad Request."
+          },
+          "response": []
+        },
+        {
+          "name": "TC-06-GET User by Username (Verify Creation)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "4e3a035c-3c97-48d2-a60b-c407864a48dc",
+                "exec": [
+                  "pm.test(\"Get user by username returns correct user (200 OK)\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "e404ddb7-30bb-4bf6-b053-4b62227182bf",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/user/{{firstName}}",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "user",
+                "{{firstName}}"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'GET' \\\r\n  'https://petstore.swagger.io/v2/user/Tolga' \\\r\n  -H 'accept: application/json'"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-07-GET User by Username (Negative - Invalid Format)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status Code is 400 or 404\", function () {\r\n    // API may treat invalid format as Bad Request (400) or Not Found (404).\r\n    pm.expect(pm.response.code).to.be.oneOf([400, 404]);\r\n});"
+                ],
+                "type": "text/javascript",
+                "id": "620957ac-9d4a-42b8-affc-3009ae02dfe1"
+              }
+            }
+          ],
+          "id": "022b86f0-88ff-43b4-b9ed-3b1b59248c9f",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/user/user$$$invalid$$$",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "user",
+                "user$$$invalid$$$"
+              ]
+            },
+            "description": "Uses invalid characters in the username path parameter. Expect: 400/404."
+          },
+          "response": []
+        },
+        {
+          "name": "TC-08-GET User by Username (Negative - Not Found)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status Code is 404 Not Found\", function () {\r\n    pm.response.to.have.status(404);\r\n});\r\n\r\n// Check that the response body contains an error message (User not found)\r\ntry {\r\n    const responseJson = pm.response.json();\r\n    pm.test(\"Error message indicates User not found\", function () {\r\n        pm.expect(responseJson.message).to.be.a('string').and.include('User not found');\r\n    });\r\n} catch (e) {}"
+                ],
+                "type": "text/javascript",
+                "id": "13b7abf9-57b2-458e-afd7-bef069761159"
+              }
+            }
+          ],
+          "id": "7b115a95-c943-41ae-ae9d-c22213e7c71f",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/user/nonexistent_user_12345",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "user",
+                "nonexistent_user_12345"
+              ]
+            },
+            "description": "Attempts to retrieve a user that does not exist. Expect: 404 Not Found."
+          },
+          "response": []
+        },
+        {
+          "name": "TC-09-Create With List (Positive)",
+          "id": "44139d8b-3d6c-4f8d-b5f6-35b23b389ee8",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n  {\r\n    \"id\": 0,\r\n    \"username\": \"string\",\r\n    \"firstName\": \"string\",\r\n    \"lastName\": \"string\",\r\n    \"email\": \"string\",\r\n    \"password\": \"string\",\r\n    \"phone\": \"string\",\r\n    \"userStatus\": 0\r\n  }\r\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/user/createWithList",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "user",
+                "createWithList"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://petstore.swagger.io/v2/user/createWithList' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '[\r\n  {\r\n    \"id\": 0,\r\n    \"username\": \"string\",\r\n    \"firstName\": \"string\",\r\n    \"lastName\": \"string\",\r\n    \"email\": \"string\",\r\n    \"password\": \"string\",\r\n    \"phone\": \"string\",\r\n    \"userStatus\": 0\r\n  }\r\n]'"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-10-Create With List (Negative-415 Unsupported Media Type)",
+          "id": "6b207de1-612d-4868-9ae5-5451ccffe1ce",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n  {\r\n    \"id\": 0,\r\n    \"username\": \"string\",\r\n    \"firstName\": \"string\",\r\n    \"lastName\": \"string\",\r\n    \"email\": \"string\",\r\n    \"password\": \"string\",\r\n    \"phone\": \"string\",\r\n    \"userStatus\": 0\r\n  }\r\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/user/createWithList",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "user",
+                "createWithList"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://petstore.swagger.io/v2/user/createWithList' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '[\r\n  {\r\n    \"id\": 0,\r\n    \"username\": \"string\",\r\n    \"firstName\": \"string\",\r\n    \"lastName\": \"string\",\r\n    \"email\": \"string\",\r\n    \"password\": \"string\",\r\n    \"phone\": \"string\",\r\n    \"userStatus\": 0\r\n  }\r\n]'"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-11- PUT Update User by Username (Positive)",
+          "id": "db6b2671-904c-4d86-ad8b-88334b4d6b15",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/user/veli",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "user",
+                "veli"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'PUT' \\\r\n  'https://petstore.swagger.io/v2/user/veli' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"id\": 0,\r\n  \"username\": \"string\",\r\n  \"firstName\": \"string\",\r\n  \"lastName\": \"string\",\r\n  \"email\": \"string\",\r\n  \"password\": \"string\",\r\n  \"phone\": \"string\",\r\n  \"userStatus\": 0"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-12-PUT Update User by Username (Negative-Method Not Allowed)",
+          "id": "2dca9516-bad3-4174-94b3-1ee46dfc6fd2",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/user/veli",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "user",
+                "veli"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'PUT' \\\r\n  'https://petstore.swagger.io/v2/user/veli' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"id\": 0,\r\n  \"username\": \"string\",\r\n  \"firstName\": \"string\",\r\n  \"lastName\": \"string\",\r\n  \"email\": \"string\",\r\n  \"password\": \"string\",\r\n  \"phone\": \"string\",\r\n  \"userStatus\": 0"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-13-DELETE User by Username (Negative - Already Deleted/Not Found)",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "0c754a91-9714-49d8-8800-3f980067454d",
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "e2be308b-eded-4988-9c88-ef1ce7ea499c",
+                "exec": [
+                  "\r",
+                  "var deletedUsername = pm.collectionVariables.get(\"username\");\r",
+                  "\r",
+                  "\r",
+                  "if (pm.response.code === 200 || pm.response.code === 204) {\r",
+                  "\r",
+                  "   \r",
+                  "pm.test(`✅ Status Code is 200 or 204 (User: ${deletedUsername} deleted successfully)`, function () {\r",
+                  "\r",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 204]);\r",
+                  "});\r",
+                  "\r",
+                  "    if (pm.response.code === 200) {\r",
+                  "        try {\r",
+                  "            const responseJson = pm.response.json();\r",
+                  "            \r",
+                  "            pm.test(\"✅ Response Body check: JSON 'message' field exist and it is  not empty\", function () {\r",
+                  "             \r",
+                  "                pm.expect(responseJson.message).to.be.a('string').and.to.have.lengthOf.at.least(1);\r",
+                  "            });\r",
+                  "            \r",
+                  "        } catch (e) {\r",
+                  "            pm.test(\"Response Body is NOT valid JSON\", function () {\r",
+                  "                pm.expect(false, \"Response body could not be parsed as valid JSON.\").to.be.true;\r",
+                  "            });\r",
+                  "        }\r",
+                  "    } \r",
+                  "    else if (pm.response.code === 204) {\r",
+                  "        pm.test(\"✅ Response Body is Empty (Expected for 204 No Content)\", function () {\r",
+                  "\r",
+                  "            pm.expect(pm.response.text()).to.eql(\"\");\r",
+                  "        });\r",
+                  "    }\r",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "d2c6141f-cc0a-4832-a4a8-581441029505",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/user/{{firstName}}",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "user",
+                "{{firstName}}"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'DELETE' \\\r\n  'https://petstore.swagger.io/v2/user/ZEYNA' \\\r\n  -H 'accept: application/json'"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-14-DELETE User by Username (Negative - 405 Method Not Allowed)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status Code is 404 Not Found (Idempotency Check)\", function () {\r\n    pm.response.to.have.status(404);\r\n});"
+                ],
+                "type": "text/javascript",
+                "id": "430dd860-25fe-476e-b0fb-42aed8eab3f9"
+              }
+            }
+          ],
+          "id": "36a88d37-8184-412a-bda7-c91e1f3197ac",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/user/{{username}}",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "user",
+                "{{username}}"
+              ]
+            },
+            "description": "Attempts to delete the same user again after a successful deletion (Idempotency Test). Expect: 404 Not Found."
+          },
+          "response": []
+        },
+        {
+          "name": "TC-15-GET User Logout (Positive)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status Code is 200 OK\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\nconst responseJson = pm.response.json();\r\npm.test(\"Logout successful, message type is 'unknown'\", function () {\r\n    pm.expect(responseJson.type).to.eql('unknown');\r\n});"
+                ],
+                "type": "text/javascript",
+                "id": "dca07280-b826-4900-9a40-4fff6194627b"
+              }
+            }
+          ],
+          "id": "a05ae578-353f-48e1-9cbb-02f42f78d054",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/user/logout",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "user",
+                "logout"
+              ]
+            },
+            "description": "Logs out the current session."
+          },
+          "response": []
+        }
+      ],
+      "id": "94261c30-3940-40ce-8849-69b6d6d4d845",
+      "description": "Scenarios testing Bad Request and other error conditions."
+    },
+    {
+      "name": "PetStore-Pet Model Test Scenarios",
+      "item": [
+        {
+          "name": "TC-01-Create Pet (Positive)",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "f74baea1-0aac-404b-a5ac-360f152e2130",
+                "exec": [
+                  "const dogNames = [\r",
+                  "    \"Asya\", \"Bella\", \"Charlie\", \"Şanslı\", \"Cooper\", \"Daisy\", \"Çakıl\", \"Boncuk\",\"Karamel\", \"Molly\", \"Jack\", \"Fındık\", \"Toby\", \"Chloe\", \"Kaju\",\"Tarçın\", \"Lola\", \"Karabaş\", \"Zeytin\"\r",
+                  "];\r",
+                  "\r",
+                  "\r",
+                  "function getRandomDogName() {\r",
+                  "    return dogNames[Math.floor(Math.random() * dogNames.length)];\r",
+                  "}\r",
+                  "\r",
+                  "pm.variables.set(\"petName\", getRandomDogName());\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "abc1bdca-8ba5-4472-8988-2f24a614a7f6",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  "var jsonData = xml2Json(pm.response.text());\r",
+                  "pm.test(`Check pet name: pet name is ${jsonData.Pet.name}`, function () {\r",
+                  "    pm.expect(jsonData.Pet.name).to.eql({Pet.name});\r",
+                  "});\r",
+                  "pm.collectionVariables.set(\"id\", jsonData.Pet.id);\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "813355af-1b05-497b-ad31-ad1e8575458f",
+          "protocolProfileBehavior": {
+            "disabledSystemHeaders": {}
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/xml"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/xml"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Pet>\r\n\t<id>0</id>\r\n\t<Category>\r\n\t\t<id>0</id>\r\n\t\t<name>string</name>\r\n\t</Category>\r\n\t<name>{{petName}}</name>\r\n\t<photoUrls>\r\n\t\t<photoUrl>string</photoUrl>\r\n\t</photoUrls>\r\n\t<tags>\r\n\t\t<Tag>\r\n\t\t\t<id>0</id>\r\n\t\t\t<name>string</name>\r\n\t\t</Tag>\r\n\t</tags>\r\n\t<status>available</status>\r\n</Pet>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://petstore.swagger.io/v2/pet' \\\r\n  -H 'accept: application/xml' \\\r\n  -H 'Content-Type: application/xml' \\\r\n  -d '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Pet>\r\n\t<id>0</id>\r\n\t<Category>\r\n\t\t<id>0</id>\r\n\t\t<name>string</name>\r\n\t</Category>\r\n\t<name>doggie</name>\r\n\t<photoUrls>\r\n\t\t<photoUrl>string</photoUrl>\r\n\t</photoUrls>\r\n\t<tags>\r\n\t\t<Tag>\r\n\t\t\t<id>0</id>\r\n\t\t\t<name>string</name>\r\n\t\t</Tag>\r\n\t</tags>\r\n\t<status>available</status>\r\n</Pet>'"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-02- Create Pet-Negative (Invalid Body)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Invalid pet body returns 400\", function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "id": "7cc82a6e-a696-438f-84c7-6bd09fa87e7f"
+              }
+            }
+          ],
+          "id": "1d2c8af7-43bd-4502-8abe-eca732bffefe",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \"invalid\": true }"
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TC-03-Delete Pet Model- Positive",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "0fa76545-3cf4-4199-a5ad-fad8f117cc14",
+                "exec": [
+                  "var deletedPetId = pm.collectionVariables.get(\"petId\");\r",
+                  "\r",
+                  "pm.test(`✅ Status is 200 or 204 (Pet ID: ${deletedPetId} deleted successfully)`, function () {\r",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 204]);\r",
+                  "});\r",
+                  "\r",
+                  "if (pm.response.code === 200) {\r",
+                  "    try {\r",
+                  "        const body = pm.response.json();\r",
+                  "\r",
+                  "        pm.test(\"✅ JSON body 'message' field exists and matches deleted Pet ID\", function () {\r",
+                  "            pm.expect(body).to.have.property(\"message\");\r",
+                  "            pm.expect(body.message).to.eql(String(deletedPetId));\r",
+                  "        });\r",
+                  "\r",
+                  "    } catch (e) {\r",
+                  "        pm.test(\"❌ Response Body is NOT valid JSON\", function () {\r",
+                  "            pm.expect(false, \"Response was not valid JSON\").to.be.true;\r",
+                  "        });\r",
+                  "    }\r",
+                  "}\r",
+                  "\r",
+                  "if (pm.response.code === 204) {\r",
+                  "    pm.test(\"✅ Response Body is Empty (Expected for 204 No Content)\", function () {\r",
+                  "        pm.expect(pm.response.text()).to.eql(\"\");\r",
+                  "    });\r",
+                  "}\r",
+                  "\r",
+                  "pm.collectionVariables.unset(\"petId\");\r",
+                  "\r",
+                  "console.log(`Pet ID ${deletedPetId} deleted.`);\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "packages": {},
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "708b3cad-2685-4891-a1f4-40b9e9f3f9f0",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "api_key",
+                "value": "345345345"
+              }
+            ],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/{{petId}}",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "{{petId}}"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'DELETE' \\\r\n  'https://petstore.swagger.io/v2/pet/44' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'api_key: 345345345'"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-04-Delete Pet - Negative(Not Found)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Deleting non-existing pet returns 404\", function () {",
+                  "    pm.response.to.have.status(404);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "id": "e6728663-f2d6-4ac8-add2-33acb4966a25"
+              }
+            }
+          ],
+          "id": "a917f3d2-7505-43a5-a21f-a77543d55293",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/999999999",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "999999999"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TC-05-Find Pet By ID - Positive",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Pet retrieved successfully\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "id": "7aea9ca4-9ee5-497c-b220-e7f5579e446f"
+              }
+            }
+          ],
+          "id": "74928128-3982-4596-924d-19fbd62906fa",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/{{petId}}",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "{{petId}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TC-06-Find Pet By ID -Negative(Not Found)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Pet retrieved successfully\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "id": "7aea9ca4-9ee5-497c-b220-e7f5579e446f"
+              }
+            }
+          ],
+          "id": "efb0b546-2bfc-455d-b13b-0bdb4d105e89",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/{{petId}}",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "{{petId}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TC-07-Update Pet(Positive)",
+          "id": "249bb91a-5352-4e6c-a0ed-451429a11013",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/xml"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/xml"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Pet>\r\n\t<id>0</id>\r\n\t<Category>\r\n\t\t<id>0</id>\r\n\t\t<name>string</name>\r\n\t</Category>\r\n\t<name>doggie</name>\r\n\t<photoUrls>\r\n\t\t<photoUrl>string</photoUrl>\r\n\t</photoUrls>\r\n\t<tags>\r\n\t\t<Tag>\r\n\t\t\t<id>0</id>\r\n\t\t\t<name>string</name>\r\n\t\t</Tag>\r\n\t</tags>\r\n\t<status>available</status>\r\n</Pet>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'PUT' \\\r\n  'https://petstore.swagger.io/v2/pet' \\\r\n  -H 'accept: application/xml' \\\r\n  -H 'Content-Type: application/xml' \\\r\n  -d '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Pet>\r\n\t<id>0</id>\r\n\t<Category>\r\n\t\t<id>0</id>\r\n\t\t<name>string</name>\r\n\t</Category>\r\n\t<name>doggie</name>\r\n\t<photoUrls>\r\n\t\t<photoUrl>string</photoUrl>\r\n\t</photoUrls>\r\n\t<tags>\r\n\t\t<Tag>\r\n\t\t\t<id>0</id>\r\n\t\t\t<name>string</name>\r\n\t\t</Tag>\r\n\t</tags>\r\n\t<status>available</status>\r\n</Pet>'"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-08-Update Pet -Negative(Invalid Input)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Pet updated successfully\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "id": "d0e33a7e-fc74-4fb4-8036-07949df91dcc"
+              }
+            }
+          ],
+          "id": "38299136-baab-4f92-bf65-7fe6d205b7ae",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": {{petId}},\n  \"name\": \"doggie_updated\",\n  \"status\": \"sold\"\n}"
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TC-09-Upload Image-Positive",
+          "id": "48559a95-2d63-462e-931a-9e827f6aa2a6",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "additionalMetadata",
+                  "value": "32423423424234234234234",
+                  "type": "text"
+                },
+                {
+                  "key": "file",
+                  "contentType": "image/png",
+                  "type": "file",
+                  "src": "2.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/555555555/uploadImage",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "555555555",
+                "uploadImage"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://petstore.swagger.io/v2/pet/555555555/uploadImage' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Content-Type: multipart/form-data' \\\r\n  -F 'additionalMetadata=32423423424234234234234' \\\r\n  -F 'file=@2.png;type=image/png'"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-10-Upload Image - Negative (Missing File)",
+          "id": "e1dcf2a6-917c-44ec-8485-35ba1c3bf825",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "additionalMetadata",
+                  "value": "32423423424234234234234",
+                  "type": "text"
+                },
+                {
+                  "key": "file",
+                  "contentType": "image/png",
+                  "type": "file",
+                  "src": "2.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/555555555/uploadImage",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "555555555",
+                "uploadImage"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://petstore.swagger.io/v2/pet/555555555/uploadImage' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Content-Type: multipart/form-data' \\\r\n  -F 'additionalMetadata=32423423424234234234234' \\\r\n  -F 'file=@2.png;type=image/png'"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-11-findByStatus-Status:Available(Positive)",
+          "id": "3a3e1eef-39e2-4f6d-9e8d-24ce2a979cfb",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/findByStatus?status=available",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "findByStatus"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "available"
+                }
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'GET' \\\r\n  'https://petstore.swagger.io/v2/pet/findByStatus?status=available' \\\r\n  -H 'accept: application/json'"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-12-findByStatus-Status:Pending(Positive)",
+          "id": "4644bca9-05db-4ecb-acc9-66ad52502eba",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/findByStatus?status=pending",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "findByStatus"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "pending"
+                }
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'GET' \\\r\n  'https://petstore.swagger.io/v2/pet/findByStatus?status=pending' \\\r\n  -H 'accept: application/json'"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-13-findByStatus- Status:Sold(Positive)",
+          "id": "135891b2-66f8-4a18-aea2-d273dc54018c",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/findByStatus?status=sold",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "findByStatus"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "sold"
+                }
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'GET' \\\r\n  'https://petstore.swagger.io/v2/pet/findByStatus?status=sold' \\\r\n  -H 'accept: application/json'"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-14-findByStatus- Status: Busy-Empty List (Positive)",
+          "id": "c4aee875-44ea-416c-8b7e-801a46e80ba5",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/findByStatus?status=sold",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "findByStatus"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "sold"
+                }
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'GET' \\\r\n  'https://petstore.swagger.io/v2/pet/findByStatus?status=sold' \\\r\n  -H 'accept: application/json'"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-15-findByStatus- Status: Busy-Negative(Missing Header)",
+          "id": "2160d80c-d7ac-4f6a-92fe-7e76468a7c65",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/findByStatus?status=sold",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "findByStatus"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "sold"
+                }
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'GET' \\\r\n  'https://petstore.swagger.io/v2/pet/findByStatus?status=sold' \\\r\n  -H 'accept: application/json'"
+          },
+          "response": []
+        }
+      ],
+      "id": "fa442a54-0433-40c8-b9ca-a2951ba33661"
+    },
+    {
+      "name": "PetStore-Store Model Test Scenarios",
+      "item": [
+        {
+          "name": "TC-01-Post Place Order - (Positive)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Order placed successfully\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "id": "3e883c97-e918-466e-a562-bd9e8ac57cc6"
+              }
+            }
+          ],
+          "id": "f46c44f5-8291-40e1-b689-778f32e69503",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1001,\n  \"petId\": 123456789,\n  \"quantity\": 1,\n  \"status\": \"placed\",\n  \"complete\": true\n}"
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/store/order",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "store",
+                "order"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TC-02-Get Pet Inventory(Positive)",
+          "id": "37100de4-0223-4161-8018-078489780b36",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/store/inventory",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "store",
+                "inventory"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'GET' \\\r\n  'https://petstore.swagger.io/v2/store/inventory' \\\r\n  -H 'accept: application/json'"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-03-Pet Order-(Negative-Bad Input)",
+          "id": "1f9c2f99-7239-499c-a36e-8b51fc5949e6",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/store/order",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "store",
+                "order"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://petstore.swagger.io/v2/store/order' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"id\": 0,\r\n  \"petId\": 0,\r\n  \"quantity\": 0,\r\n  \"shipDate\": \"2025-12-10T14:21:58.389Z\",\r\n  \"status\": \"placed\",\r\n  \"complete\": true\r\n}"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-04-Get Order ID -Negative( Send Invalid Order Id)",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "98e8cb7f-74b7-43d4-a499-75785b41a9f7",
+                "exec": [
+                  "var invalidOrderId = Math.floor(Math.random() * 900) + 11; // 11–910 arası\r",
+                  "pm.variables.set(\"orderId\", invalidOrderId);\r",
+                  "\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "10f239d5-ae70-4f5b-88e0-0c05f7ec5233",
+                "exec": [
+                  "var orderId = pm.variables.get(\"orderId\");\r",
+                  "var body = pm.response.json();\r",
+                  "\r",
+                  "// Status code kontrolü\r",
+                  "pm.test(`Invalid Order Id :(${orderId})- 'For 'orderId': Value must be less than or equal to 10 '`, function () {\r",
+                  "    pm.expect(pm.response.code).to.be.oneOf([400, 404, 422]);\r",
+                  "      pm.expect(body).to.have.property(\"message\");\r",
+                  "    pm.expect(body.message).to.eql(\"Order not found\");\r",
+                  "});\r",
+                  "\r",
+                  "\r",
+                  "\r",
+                  "// Console log\r",
+                  "console.log(`Order ID ${orderId} test result:`);\r",
+                  "console.log(\"Status code:\", pm.response.code);\r",
+                  "console.log(\"Response body:\", pm.response.text());\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "0ef31bcc-3f9b-49fb-8c69-4b09038059d7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "var orderId = pm.variables.get(\"OrderId\");\r\nvar body = pm.response.json();\r\n\r\n// Status code kontrolü\r\npm.test(`✅ Negative test for invalid orderId (${orderId}) - Status code`, function () {\r\n    pm.expect(pm.response.code).to.be.oneOf([400, 404, 422]);\r\n});\r\n\r\n// Hata mesajı kontrolü\r\npm.test(`✅ Error message for invalid orderId (${orderId})`, function () {\r\n    pm.expect(body).to.have.property(\"message\");\r\n    pm.expect(body.message).to.eql(\"Order not found\");\r\n});\r\n\r\n// Console log\r\nconsole.log(`Order ID ${orderId} test result:`);\r\nconsole.log(\"Status code:\", pm.response.code);\r\nconsole.log(\"Response body:\", pm.response.text());\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/store/order/{{orderId}}",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "store",
+                "order",
+                "{{orderId}}"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'GET' \\\r\n  'https://petstore.swagger.io/v2/store/order/3' \\\r\n  -H 'accept: application/json'"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-05-Get Order By ID - Negative (Not Found)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Order not found for non-existing orderId\", function () {",
+                  "    pm.response.to.have.status(404);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "id": "a075cce8-9761-4c2b-95c5-5c97835fe001"
+              }
+            }
+          ],
+          "id": "646fd53e-843d-4aa2-801a-5bd529b6d10d",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/store/order/999999999",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "store",
+                "order",
+                "999999999"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TC-06-Delete Order ID (Positive)",
+          "id": "31f63886-a940-4480-81ae-e82aabf18c7a",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/store/order/4234",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "store",
+                "order",
+                "4234"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'DELETE' \\\r\n  'https://petstore.swagger.io/v2/store/order/4234' \\\r\n  -H 'accept: application/json'"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-07-Place Order - Negative (Invalid Quantity Type)",
+          "id": "e82e8a26-bb71-4a06-a2e4-5ef892dc5adb",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 10,\r\n  \"petId\": 0,\r\n  \"quantity\": 0,\r\n  \"shipDate\": \"2025-12-14T18:57:39.412Z\",\r\n  \"status\": \"placed\",\r\n  \"complete\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/store/order",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "store",
+                "order"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://petstore.swagger.io/v2/store/order' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"id\": 10,\r\n  \"petId\": 0,\r\n  \"quantity\": 0,\r\n  \"shipDate\": \"2025-12-14T18:57:39.412Z\",\r\n  \"status\": \"placed\",\r\n  \"complete\": true\r\n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-08-Delete Order ID (Negative-Order Not Found)",
+          "id": "26cff585-d19d-4283-8597-e9a44e727d6b",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/store/order/4234",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "store",
+                "order",
+                "4234"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'DELETE' \\\r\n  'https://petstore.swagger.io/v2/store/order/4234' \\\r\n  -H 'accept: application/json'"
+          },
+          "response": []
+        },
+        {
+          "name": "TC-09-Get Order ID(Positive)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "cf3f72eb-79ea-4941-b203-8e100a0828c6",
+                "exec": [
+                  "var body = pm.response.json(); \r",
+                  "pm.test(\"✅Get Order ID success,Response has all expected fields- (Status code-200 OK)\", function () {\r",
+                  "    pm.response.to.have.status(200); \r",
+                  "    pm.expect(body).to.include.all.keys(\r",
+                  "        \"id\",\r",
+                  "        \"petId\",\r",
+                  "        \"quantity\",\r",
+                  "        \"shipDate\",\r",
+                  "        \"status\",\r",
+                  "        \"complete\"\r",
+                  "    );\r",
+                  "\r",
+                  "});\r",
+                  "console.log(\"Order fetched successfully:\", body);\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "62f40cd5-e0a3-4cb2-b9fb-5ab2f47ad364",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/store/order/1",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "store",
+                "order",
+                "1"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'GET' \\\r\n  'https://petstore.swagger.io/v2/store/order/3' \\\r\n  -H 'accept: application/json'"
+          },
+          "response": []
+        }
+      ],
+      "id": "b83b58e9-4cf8-4b5a-b684-55565b5d7b3e"
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "ffee90b1-a629-4fd1-958a-dc20d72dadac",
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "8b06a547-f979-44db-899d-340ba8a08272",
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "38b13b1b-189f-4c66-972c-15075b95f643",
+      "key": "firstName",
+      "value": ""
+    },
+    {
+      "id": "068d150b-a123-4a2b-8bbb-6a2ac79755e9",
+      "key": "lastName",
+      "value": ""
+    },
+    {
+      "id": "eb17597b-8537-4a80-8b58-5e73700fbf33",
+      "key": "email",
+      "value": ""
+    },
+    {
+      "id": "94752e54-7794-4501-bb86-a1d3b039e1c5",
+      "key": "password",
+      "value": ""
+    },
+    {
+      "id": "a20a4a7d-45aa-4451-b7c9-dfa118134e17",
+      "key": "phone",
+      "value": ""
+    },
+    {
+      "id": "736666d5-d1f6-46f2-ba83-88e5188086fe",
+      "key": "userStatus",
+      "value": ""
+    },
+    {
+      "id": "87037ce0-0488-4e6c-b045-68a05d853e64",
+      "key": "username",
+      "value": ""
+    },
+    {
+      "id": "7ec6f6f5-4dbb-4c69-ad13-6e4129d03b60",
+      "key": "id",
+      "value": ""
+    },
+    {
+      "id": "79da16f2-47dc-43be-8007-c2c33b3338c8",
+      "key": "newFirstName",
+      "value": ""
+    },
+    {
+      "id": "0fc973f1-efd8-4927-ad97-202f66dc3d0c",
+      "key": "newLastName",
+      "value": ""
+    },
+    {
+      "id": "a12d64e9-252b-4fc2-b36b-f10157b6f5d4",
+      "key": "newStatus",
+      "value": ""
+    },
+    {
+      "id": "be1366e4-0e57-4119-a78c-262c1dd456d3",
+      "key": "petId",
+      "value": ""
+    }
+  ]
+}
