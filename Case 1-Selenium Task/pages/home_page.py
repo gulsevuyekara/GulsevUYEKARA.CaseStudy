@@ -108,7 +108,6 @@ class HomePage:
     def quit(self):
         self.driver.quit()
 
-
 if __name__ == "__main__":
     for browser in ["CHROME", "FIREFOX"]:
         log_result(f"=== STARTING TEST ON {browser} ===")
