@@ -601,3 +601,9 @@ Symbols not available. Dumping unresolved backtrace:
 [2025-12-13 05:29:22] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
 [2025-12-13 05:29:23] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
 [2025-12-13 05:29:23] Home page is accessible. All essential elements are present.
+[2025-12-15 00:56:35] === STARTING TEST ON CHROME ===
+[2025-12-15 00:56:46] Cookie overlay closed.
+[2025-12-15 00:56:46] Title exists: Insider One | #1 Platform for AI-Powered Customer Engagement
+[2025-12-15 00:56:47] Essential elements found: Logo Insider One, Header Menu Button, Login Button, Industries Link, Customers Link, Resources Button
+[2025-12-15 00:56:47] Home page is accessible. All essential elements are present.
+[2025-12-15 00:56:49] === STARTING TEST ON FIREFOX ===
