@@ -30,12 +30,19 @@ python -m locust -f "C:\Users\Gülsev\OneDrive\Desktop\Gulsev_UYEKARA_Case Study
 ### Notes
 - PyCharm or any IDE is optional. Locust tests can be run entirely from the terminal.
 - Test reports can be exported directly from the Locust UI in your browser.
-#3- Petstore Postman API Tests
+---
+
+# 3️⃣3- Petstore Postman API Tests
+
 ### Requirements
 - Postman installed
 
 ### How to Run
-Import the Postman collection file(s) into Postman.
+1. Import the Postman collection file(s) into Postman.
+2. Execute the requests according to the collection.
+
+---
+
 
 
 
