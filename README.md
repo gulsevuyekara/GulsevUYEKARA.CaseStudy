@@ -2,8 +2,8 @@
 # 1️-Selenium UI Test Project
 
 ### Requirements
-- Python 3.x
-- Selenium library (`pip install selenium`)
+- Python 3.12,
+- Selenium library (`pip install selenium`),
 - WebDriver (ChromeDriver / EdgeDriver)
 
 # 2️-N11 Load Test (Locust)
