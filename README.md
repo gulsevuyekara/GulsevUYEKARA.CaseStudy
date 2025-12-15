@@ -6,7 +6,6 @@
 - Selenium library (`pip install selenium`)
 - WebDriver (ChromeDriver / EdgeDriver)
 
-
 # 2️-N11 Load Test (Locust)
 
 ### Test Cases
