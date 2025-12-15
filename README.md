@@ -1,3 +1,4 @@
+<img width="1907" height="781" alt="1" src="https://github.com/user-attachments/assets/a9b688c6-df24-4277-9575-74c3b8040bc1" />
 
 # 1️-Selenium UI Test Project
 
@@ -30,7 +31,9 @@ python -m locust -f "C:\Users\Gülsev\OneDrive\Desktop\Gulsev_UYEKARA_Case Study
 
 
 ### Notes
-- PyCharm or any IDE is optional. Locust tests can be run entirely from the terminal.
+- PyCharm or any IDE is optional. Locust tests can be run entirely from the terminal.<img width="1867" height="391" alt="3" src="https://github.com/user-attachments/assets/bc0222a8-eb52-4fe5-967f-3bbda3f2aeba" />
+<img width="1693" height="346" alt="2" src="https://github.com/user-attachments/assets/1f33b279-27fe-40f1-8b66-c8cf3232bfaa" />
+
 - Test reports can be exported directly from the Locust UI in your browser.
 
 
