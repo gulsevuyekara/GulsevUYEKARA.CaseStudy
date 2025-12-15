@@ -32,7 +32,7 @@ python -m locust -f "C:\Users\Gülsev\OneDrive\Desktop\Gulsev_UYEKARA_Case Study
 - Test reports can be exported directly from the Locust UI in your browser.
 
 
-# 3-Postman API Tests
+3-Postman API Tests
 
 ### Requirements
 - Postman installed
