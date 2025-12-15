@@ -23,9 +23,7 @@ Run the Locust test using the following command in your terminal:
 ```bash
 python -m locust -f "C:\Users\Gülsev\OneDrive\Desktop\Gulsev_UYEKARA_Case Study\Case2-N11LoadTest\locustfile.py"
 
-assets/1.png
-<img width="1693" height="346" alt="1" src="https://github.com/user-attachments/assets/67b683c0-de8b-458f-88f6-e407f2ea3743" />
-<img width="1907" height="781" alt="2" src="https://github.com/user-attachments/assets/5849c1e2-654c-4137-84f3-95bb3f52497a" />
+<img width="1693" height="346" alt="1" src="https://github.com/user-attachments/assets/79591ee6-770f-4a66-a456-47506c8313fd" />
 
 
 <img width="1867" height="391" alt="3" src="https://github.com/user-attachments/assets/6ecd9d4b-a538-44e7-b26c-50e148a5f83b" />
