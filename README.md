@@ -23,12 +23,12 @@ Run the Locust test using the following command in your terminal:
 ```bash
 python -m locust -f "C:\Users\Gülsev\OneDrive\Desktop\Gulsev_UYEKARA_Case Study\Case2-N11LoadTest\locustfile.py"
 
-<img width="1907" height="781" alt="1" src="https://github.com/user-attachments/assets/27ec8296-eca9-402d-ae05-8f7442747424" />
+assets/1.png
+<img width="1693" height="346" alt="1" src="https://github.com/user-attachments/assets/67b683c0-de8b-458f-88f6-e407f2ea3743" />
+<img width="1907" height="781" alt="2" src="https://github.com/user-attachments/assets/5849c1e2-654c-4137-84f3-95bb3f52497a" />
 
-<img width="1907" height="781" alt="1" src="https://github.com/user-attachments/assets/a9b688c6-df24-4277-9575-74c3b8040bc1" />
 
-<img width="1867" height="391" alt="3" src="https://github.com/user-attachments/assets/a269c32f-be14-4ba4-8f27-6a2462aa2884" />
-
+<img width="1867" height="391" alt="3" src="https://github.com/user-attachments/assets/6ecd9d4b-a538-44e7-b26c-50e148a5f83b" />
 
 ### Notes
 - PyCharm or any IDE is optional. Locust tests can be run entirely from the terminal.<img width="1867" height="391" alt="3" src="https://github.com/user-attachments/assets/bc0222a8-eb52-4fe5-967f-3bbda3f2aeba" />
