@@ -23,7 +23,7 @@ Run the Locust test using the following command in your terminal:
 ```bash
 python -m locust -f "C:\Users\Gülsev\OneDrive\Desktop\Gulsev_UYEKARA_Case Study\Case2-N11LoadTest\locustfile.py"
 
-![Locust Command Line](main.assets/1.png)
+![Locust Command Line](main.assets\1.png)
 ![Locust Test Running](assets/2.png)
 ![Locust Report Example](assets/3.png)
 
