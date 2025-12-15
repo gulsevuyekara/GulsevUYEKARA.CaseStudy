@@ -23,11 +23,10 @@ Run the Locust test using the following command in your terminal:
 ```bash
 python -m locust -f "C:\Users\Gülsev\OneDrive\Desktop\Gulsev_UYEKARA_Case Study\Case2-N11LoadTest\locustfile.py"
 
-- [Locust Run Command](python -m locust -f "C:\Users\Gülsev\OneDrive\Desktop\Gulsev_UYEKARA_Case Study\Case2-N11LoadTest\locustfile.py"
+[Locust Run Command](https://raw.githubusercontent.com/gulsevuyekara/GulsevUYEKARA.CaseStudy/main/1.png)
+[Locust Test Running](https://raw.githubusercontent.com/gulsevuyekara/GulsevUYEKARA.CaseStudy/main/2.png)
+[Locust Report Example](https://raw.githubusercontent.com/gulsevuyekara/GulsevUYEKARA.CaseStudy/main/3.png)
 
-- [Locust Run Command] 1.png
-- [Locust Test Running](https://github.com/gulsevuyekara/GulsevUYEKARA.CaseStudy/blob/main/2.png)
-- [Locust Report Example](https://github.com/gulsevuyekara/GulsevUYEKARA.CaseStudy/blob/main/3.png)
 
 ### Notes
 - PyCharm or any IDE is optional. Locust tests can be run entirely from the terminal.
@@ -43,8 +42,6 @@ python -m locust -f "C:\Users\Gülsev\OneDrive\Desktop\Gulsev_UYEKARA_Case Study
 ### How to Run
 Import the Postman collection file(s) into Postman.
 
-- [Locust Test Running](https://github.com/gulsevuyekara/GulsevUYEKARA.CaseStudy/blob/main/2.png)
-- [Locust Report Example](https://github.com/gulsevuyekara/GulsevUYEKARA.CaseStudy/blob/main/3.png)
 
 ### Notes
 - PyCharm or any IDE is optional. Locust tests can be run entirely from the terminal.
