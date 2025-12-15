@@ -16,7 +16,7 @@ Refer to this file to see all the individual test cases and their details before
 ### Requirements
 - Locust library (`pip install locust`)
 
-## How to Run
+# How to Run
 Run the Locust test using the following command in your terminal:
 
 Example:
@@ -31,7 +31,7 @@ python -m locust -f "C:\Users\Gülsev\OneDrive\Desktop\Gulsev_UYEKARA_Case Study
 - PyCharm or any IDE is optional. Locust tests can be run entirely from the terminal.
 - Test reports can be exported directly from the Locust UI in your browser.
 
-### 3- Petstore Postman API Tests
+#3- Petstore Postman API Tests
 
 ### Requirements
 - Postman installed
