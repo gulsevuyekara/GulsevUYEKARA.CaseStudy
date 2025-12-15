@@ -24,13 +24,12 @@ Run the Locust test using the following command in your terminal:
 python -m locust -f "C:\Users\Gülsev\OneDrive\Desktop\Gulsev_UYEKARA_Case Study\Case2-N11LoadTest\locustfile.py"
 
 ![Locust Command Line](1.png)
-![Locust Test Running](/2.png)
-![Locust Report Example](assets/3.png)
+![Locust Test Running](2.png)
+![Locust Report Example](3.png)
 
 
 ### Notes
-- PyCharm or any IDE is optional. Locust tests can be run entirely from the terminal.<img width="1867" height="391" alt="3" src="https://github.com/user-attachments/assets/bc0222a8-eb52-4fe5-967f-3bbda3f2aeba" />
-<img width="1693" height="346" alt="2" src="https://github.com/user-attachments/assets/1f33b279-27fe-40f1-8b66-c8cf3232bfaa" />
+- PyCharm or any IDE is optional. Locust tests can be run entirely from the terminal.
 
 - Test reports can be exported directly from the Locust UI in your browser.
 
